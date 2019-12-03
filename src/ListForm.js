@@ -23,8 +23,9 @@ class ListForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={ this.handleSubmit }>
+      <form className="form-container" onSubmit={ this.handleSubmit }>
         <input 
+          className="input"
           required placeholder="Add an Item" 
           value={this.state.name}
           name="name"

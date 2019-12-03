@@ -11,8 +11,8 @@ const GroceryItem = (props) => {
 }
 
 const styles = {
-  item: { cursor: "pointer", },
-  complete: { color: "grey", textDecoration: "line-through"}
+  item: { cursor: "pointer", fontWeight: "500"},
+  complete: { color: "grey", textDecoration: "line-through", fontWeight: "500"}
 };
 
 export default GroceryItem;

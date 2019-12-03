@@ -56,9 +56,9 @@ class App extends React.Component {
   visibleItems = () => {
     const { groceries, filter } = this.state;
     switch(filter) {
-      case 'Active':
+      case 'Not Bought':
         return groceries.filter( t => !t.complete )
-      case 'Complete':
+      case 'Bought':
         return groceries.filter( t => t.complete )
       default:
         return groceries;
@@ -68,8 +68,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App App-header">
+        <h1>Grocery List</h1>
         <ListForm addItem={ this.addItem } />
-        <List name="Grocery List" items={this.visibleItems()} itemClick={ this.handleClick }/>
+        <List items={this.visibleItems()} itemClick={ this.handleClick }/>
         <Footer filter={this.state.filter} setFilter={this.setFilter} />
       </div>
     );

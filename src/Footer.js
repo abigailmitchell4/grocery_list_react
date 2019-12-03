@@ -3,10 +3,10 @@ import React from 'react';
 const styles = {
   link: { 
     cursor: 'pointer', 
-    textDecoration: 'underline', 
-    color: 'white',
+    color: '#006188',
     marginLeft: '5px',
     marginRight: '5px',
+    padding: '20px 10px'
   }
 };
 
@@ -19,7 +19,7 @@ const filterLink = (current, name, setFilter) => {
 
 const Footer = ({ filter, setFilter }) => (
   <div>
-    { ['All', 'Active', 'Complete'].map( f => filterLink(filter, f, setFilter) ) }
+    { ['All', 'Not Bought', 'Bought'].map( f => filterLink(filter, f, setFilter) ) }
   </div>
 );
 
